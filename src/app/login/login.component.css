@@ -1,0 +1,21 @@
+.parent{
+    width:100vw;
+    height:100vh;
+    background-color: rgb(103, 15, 185);
+    justify-content:center;
+    display: flex;
+    align-items: center;
+}
+.body{
+    width:25%;
+    height:65%;
+    background-color:rgb(218, 214, 216);
+    border-radius:10%;
+    text-align: center;
+     
+}
+.aa{
+    width:30%; 
+    height:40%; 
+    background-color: rgb(243, 138, 9);
+}

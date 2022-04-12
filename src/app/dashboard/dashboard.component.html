@@ -1,0 +1,32 @@
+<p>dashboard!</p>
+<div class="parent">
+   <div class="left">
+       <div class="div">
+      <img src="/assets/Ester-Anil.jpg" class="rounded" alt="" width="40%" height="25%">
+      <h4>kenkalil</h4>
+      <h4>as123@gmail.com</h4>
+      <hr>
+       <h3>Home</h3>
+       <h3 routerLink="interpolation">Interpolation</h3>
+       <h3 routerLink="eventbinding">EventBinding</h3>
+       <h3 routerLink="apps">Apps</h3>
+       <h3 routerLink="vehiclesummary">VehicleSummary</h3>
+       <h3 routerLink="acconts">Acconts</h3>
+       <h3 routerLink="products">Products</h3>
+       <h4 routerLink="createvehicle">createVehicle</h4>
+       <h4 routerLink="createaccount">createAccount</h4>
+       <hr>
+       <button routerLink="/login" class="btn- btn-info">logout</button>
+    </div>
+   </div>
+   <div class="right">
+       <div class="aa">
+           <h3 style="color: aqua;">personal progress</h3>
+           <button style="background-color: rgb(52, 224, 81);border-radius:10%;">contact support</button>
+        </div>
+        <div class="bb">
+         <router-outlet></router-outlet>
+        </div>
+   </div>
+    
+</div>

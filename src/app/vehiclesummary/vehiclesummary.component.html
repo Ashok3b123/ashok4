@@ -1,0 +1,54 @@
+<div class="aa">
+    <input [(ngModel)] ="filterTerm">
+    <button (click)="filter()">filter</button>
+    <br>
+    <select [(ngModel)]="column">
+        <option value="id">id</option>
+        <option value="Vehicle">vehicle</option>
+        <option value="manufacturer">manufacturer</option>
+        <option value="model">model</option>
+        <option value="type">type</option>
+        <option value="fuel">fuel</option>
+        <option value="color">color</option>
+    </select>
+    <select [(ngModel)]="order">
+        <option value="asc">ascending</option>
+        <option value="desc">descending</option>
+    </select>
+
+    <button (click)="sort()">sortBy</button>
+    <!-- <button (click)="">order</button> -->
+    <br>
+    <input type="number"[(ngModel)]="page" value="page">
+    <input type="number"[(ngModel)]=limit value="limit">
+    <button (click)="pagination()">page</button>
+    
+    <table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>vehicle</th>
+            <th>manufacturer</th>
+            <th>model</th>
+            <th>type</th>
+            <th>fuel</th>
+            <th>color</th>
+            <th>image</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let data of datas">
+            <ng-container>
+            <td>{{data.id}}</td>
+            <td>{{data.vehicle}}</td>
+            <td>{{data.manufacturer}}</td>
+            <td>{{data.model}}</td>
+            <td>{{data.type}}</td>
+            <td>{{data.fuel}}</td>
+            <td>{{data.color}}</td>
+             <td><img src="{{data.image}}"alt="" width="20%" height="30%" ></td>
+            </ng-container>
+        </tr>
+    </tbody>
+ </table>
+</div> 

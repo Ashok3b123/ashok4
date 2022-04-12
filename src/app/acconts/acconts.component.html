@@ -1,0 +1,29 @@
+<p>acconts works!</p>
+<div class="as">
+    <input style="width:50%;" [(ngModel)] ="filterTerm">
+    <button (click)="filter()" style="width:10%;">filter</button>
+<table class="table">
+    <thead>
+        <tr>
+            <th>accountname</th>
+            <th>balance</th>
+            <th>currency</th>
+            <th>image</th>
+            <th>id</th>
+            <th>accountnumber</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let flip of flips">
+            <ng-container>
+            <td>{{flip.accountname}}</td>
+            <td>{{flip.balance}}</td>
+            <td>{{flip.currency}}</td>
+            <td><img src="{{flip.image}}"alt="" width="30%" height="30%" ></td>
+            <td>{{flip.id}}</td>
+             <td>{{flip.accountnumber}}></td>
+            </ng-container>
+        </tr>
+    </tbody>
+</table>
+</div>

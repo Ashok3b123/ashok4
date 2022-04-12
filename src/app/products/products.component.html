@@ -1,0 +1,16 @@
+<p>products works!</p>
+<div class="container">
+  <div class=" p row">
+    <div class="card col-lg-3 col-md-6 col-sm-12" *ngFor="let group of groups">
+      <div class=" card-body">
+        <img src="{{group.image}}" alt="" width="20%" height="20%">
+          <p>name:{{group.id}}</p>
+          <p>title:{{group.title}}</p>          
+          <p>price:{{group.price}}</p>
+          <p>description:{{group.description}}</p>
+          <p>role:{{group.category}}</p>
+          <a href="#" class="btn btn-primary">Add to cart</a>
+      </div>
+      </div>
+    </div>
+  </div>
