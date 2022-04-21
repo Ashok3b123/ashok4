@@ -11,7 +11,6 @@ export class AccontsComponent implements OnInit {
   constructor(private accontservice:AccontService){
   accontservice.getflip().subscribe( 
     (data:any)=>{this.flips=data},
-    
     (error: any)=>{ alert("Internal service error");})
   }
   filterTerm="";

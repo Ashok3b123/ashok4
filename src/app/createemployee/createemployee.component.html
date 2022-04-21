@@ -1,0 +1,102 @@
+<p>createemployee works!</p>
+<form [formGroup]="employee">
+    <div class="ABC">
+    <div class="RRR">
+      <h4>CreateAccount</h4>
+        <div>
+          <label>Name:</label>
+            <input formControlName="name">
+            <br>
+        </div>
+        <div>
+            <label >mobile:</label>
+            <input formControlName="mobile">
+            <br>
+        </div>
+        <div>
+            <label>email:</label>
+            <input formControlName="email">
+            <br>
+            <br>
+        </div>
+        <div>
+            <label >dob:</label>
+            <input formControlName="dob"type="date">
+        </div>
+        <br>
+        <div formGroupName="address">
+            
+            <div>
+                <label>address</label>
+                <input formControlName="addressline"> 
+                <div *ngIf="employee.get('address')?.get('addressline')?.touched && employee.get('address')?.get('addressline')?.invalid">
+                    <p  *ngIf="employee.get('address')?.get('addressline')?.errors?.['required']">required this field</p>
+                    <p  *ngIf="employee.get('address')?.get('addressline')?.errors?.['minlength']">required minlength</p>
+                    <p  *ngIf="employee.get('address')?.get('addressline')?.errors?.['maxlength']">required maxlength</p>
+                </div>
+            </div>
+            <br>
+            <div>
+                <label>city</label>
+                <input formControlName="city">
+                <br>  
+            </div>
+            <div>
+                <label>state</label>
+                <input formControlName="state">
+                <br>  
+            </div>
+            <div>
+                <label>pincode</label>
+                <input formControlName="pincode">
+                <div *ngIf="employee.get('address')?.get('pincode')?.touched && employee.get('address')?.get('pincode')?.invalid">
+                    <p class="error"  *ngIf="employee.get('address')?.get('pincode')?.errors?.['required']">required this field</p>
+                    <p  *ngIf="employee.get('address')?.get('pincode')?.errors?.['minlength']">required minlength</p>
+                    <p  *ngIf="employee.get('address')?.get('pincode')?.errors?.['maxlength']">required maxlength</p>
+                </div>
+            </div>
+            <br>
+        </div>
+            <button (click)="add()">add</button>
+             <div formArrayName="educationform">
+                <div *ngFor="let education of educationFormArray.controls;let i=index">
+                    <div formGroupName="{{i}}">
+                        <input formControlName="year">
+                        <input formControlName="qualification">
+                        <input formControlName="percentage">
+                        <div *ngIf="educationFormArray.controls[i]?.get('percentage')?.touched && educationFormArray.controls[i]?.get('percentage')?.invalid">
+                         <p *ngIf="educationFormArray.controls[i]?.get('percentage')?.errors?.['required']">required this field</p>
+
+                        </div>
+                        <button (click)="delete(i)">delete</button>
+                    </div>
+                </div>
+             </div>
+
+     <button (click)="submit()" [disabled]="employee.invalid">submit</button>
+    </div>
+
+
+    <br>
+    <br>
+    <label>role:</label>
+    <label>FrontEnd</label>
+    <input type="radio" name="role" formControlName="role" value="FE">
+    <label>BackEnd</label>
+    <input type="radio" name="role" formControlName="role" value="BE">
+
+    </div>
+    <div *ngIf="employee.get('role')?.value=='FE'">
+        <label for="html">html</label>
+        <input type="text"id="html"formControlName="html">
+        <label for="angular">angular</label>
+        <input type="text"id="angular"formControlName="angular">
+    </div>
+    <div *ngIf="employee.get('role')?.value=='BE'">
+        <label for="java">java</label>
+        <input type="text"id="java"formControlName="java">
+        <label for="sql">sql</label>
+        <input type="text"id="angular"formControlName="sql">
+    </div>
+
+</form>

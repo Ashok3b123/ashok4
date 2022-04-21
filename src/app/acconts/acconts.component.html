@@ -5,23 +5,23 @@
 <table class="table">
     <thead>
         <tr>
-            <th>accountname</th>
-            <th>balance</th>
+            <th>account name</th>
+            <th>available balance</th>
             <th>currency</th>
-            <th>image</th>
+            <th>user image</th>
             <th>id</th>
-            <th>accountnumber</th>
+            <th>account number</th>
         </tr>
     </thead>
     <tbody>
         <tr *ngFor="let flip of flips">
             <ng-container>
-            <td>{{flip.accountname}}</td>
-            <td>{{flip.balance}}</td>
+            <td>{{flip.account_name}}</td>
+            <td>{{flip.available_balance}}</td>
             <td>{{flip.currency}}</td>
-            <td><img src="{{flip.image}}"alt="" width="30%" height="30%" ></td>
+            <td><img src="{{flip.user_image}}"alt="" width="30%" height="30%" ></td>
             <td>{{flip.id}}</td>
-             <td>{{flip.accountnumber}}></td>
+             <td>{{flip.account_number}}></td>
             </ng-container>
         </tr>
     </tbody>

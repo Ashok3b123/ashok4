@@ -6,7 +6,7 @@
         <img src="{{group.image}}" alt="" width="20%" height="20%">
           <p>name:{{group.id}}</p>
           <p>title:{{group.title}}</p>          
-          <p>price:{{group.price}}</p>
+          <p>price:{{group.price|currency:'USA'}}</p>
           <p>description:{{group.description}}</p>
           <p>role:{{group.category}}</p>
           <a href="#" class="btn btn-primary">Add to cart</a>

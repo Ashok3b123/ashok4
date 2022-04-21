@@ -1,0 +1,32 @@
+<p>employee works!</p>
+<input type [(ngModel)]="filterTerm">
+<button (click)="filter()">filter</button>
+<table>
+    <thead>
+        <tr>
+            <th>name</th>
+            <th>mobile</th>
+            <th>email</th>
+            <th>dob</th>
+            <th>address</th>
+            <th>education</th>
+            <th>role</th>
+            <th>id</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let data of datas">
+            <td>{{data.name}}</td>
+        
+            <td>{{data.mobile}}</td>
+            <td>{{data.email}}</td>
+            <td>{{data.dob}}</td>
+            <td>{{data.address}}</td>
+            <td>{{data.education}}</td>
+            <td>{{data.role}}</td>
+            <td>{{data.id}}</td>
+            <td><button (click)="delete(data.id)">delete</button></td>
+    
+        </tr>
+    </tbody>
+</table>

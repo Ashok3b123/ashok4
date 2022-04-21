@@ -1,2 +1,45 @@
 <p>create-account works!</p>
-gfgdfg
+<form [formGroup]="accountForm">
+    <div class="ABC">
+    <div class="RRR">
+    <h4>CreateAccount</h4>
+    <div><label>AccountName:</label>
+    <input formControlName="account_name">
+    <div *ngIf="accountForm.get('account_name')?.touched && accountForm.get('account_name')?.invalid"></div>
+     <div *ngIf="accountForm.get('account_name')?.touched && accountForm.get('account_name')?.valid"></div>
+    <br></div>
+    <div><label >Balance:</label>
+    <input formControlName="available_balance">
+    <p>touched:{{accountForm.get('available_balance')?.touched}}</p>
+
+    <br></div>
+    <div><label>currency:</label>
+    <input formControlName="currency">
+    <p>touched:{{accountForm.get('currency')?.touched}}</p>
+    <br></div>
+    <div><label >AccountNumber:</label>
+    <input formControlName="account_number">
+    <p>touched:{{accountForm.get('account_number')?.touched}}</p>
+    <br></div>
+    <div><label>Id</label>
+    <input formControlName="id">
+    <!-- <p>touched:{{accountForm.get('id')?.touched}}</p> -->
+    <p class="legend" *ngIf="accountForm.get('id')?.errors?.['required']">required this field</p>
+    <p class="legend" *ngIf="accountForm.get('id')?.errors?.['minlength']">required minlength</p>
+    <p class="legend" *ngIf="accountForm.get('id')?.errors?.['maxlength']">required maxlength</p>
+    </div>
+    <button (click)="add()">add</button>
+    <div formArrayName="card">
+        <div *ngFor="let card of cardFormArray.controls;let i=index">
+         <div formGroupName="{{i}}">
+            <input formControlName="cardno" placeholder="cardno">
+            <input formControlName="expiry" placeholder="expiry">
+            <input formControlName="cvv" placeholder="cvv">
+            <button (click)="delete(i)">delete</button>
+         </div>
+        </div>
+    </div>
+    <button (click)="submit()">submit</button>
+    </div>
+    </div>
+    </form>

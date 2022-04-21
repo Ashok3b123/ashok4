@@ -47,6 +47,9 @@
             <td>{{data.fuel}}</td>
             <td>{{data.color}}</td>
              <td><img src="{{data.image}}"alt="" width="20%" height="30%" ></td>
+             <td><button (click)="delete(data.id)">delete</button></td>
+             <td><button (click)="view(data.id)">view</button></td>
+             <td><button (click)="edit(data.id)">Edit</button></td>
             </ng-container>
         </tr>
     </tbody>

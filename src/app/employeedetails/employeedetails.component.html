@@ -1,0 +1,78 @@
+<p>employeedetails works! : {{details|json}}</p>
+<pre>{{details|json}}</pre>
+
+
+
+<div class="row">
+    <div class="col-sm-6" style="background-color:rgb(41, 197, 27);">
+       
+        <div class="row">
+            <div class="col-sm-6" style="background-color:rgb(218, 13, 157);">
+                Vehicle:
+            </div>
+            <div class="col-sm-6" style="background-color:lavender;">
+                {{details.Vehicle}}
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6" style="background-color:rgb(196, 14, 180);">
+                manufacturer:
+            </div>
+            <div class="col-sm-6" style="background-color:lavender;">
+                {{details.manufacturer}}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6" style="background-color:rgb(236, 12, 180);">
+                model:
+            </div>
+            <div class="col-sm-6" style="background-color:lavender;">
+                {{details.model}}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6" style="background-color:rgb(236, 34, 152);">
+                type:
+            </div>
+            <div class="col-sm-6" style="background-color:lavender;">
+                {{details.type}}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6" style="background-color:rgb(231, 23, 138);">
+                fuel:
+            </div>
+            <div class="col-sm-6" style="background-color:lavender;">
+                {{details.fuel}}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6" style="background-color:rgb(219, 13, 140);">
+                color:
+            </div>
+            <div class="col-sm-6" style="background-color:lavender;">
+                {{details.color}}
+            </div>
+        </div>
+            <div class="row">
+                <div class="col-sm-6" style="background-color:rgb(228, 13, 142);">
+                    id:
+                </div>
+                <div class="col-sm-6" style="background-color:rgb(243, 232, 238);">
+                    {{details.id}}
+                </div>
+            </div>
+       
+    </div>
+    <div class="col-sm-6" style="background-color:lavenderblush;">
+        <div class="row">
+            <div class="col-sm-6" style="background-color:rgb(218, 13, 157);">
+                Vehicle:
+            </div>
+            <div class="col-sm-6" style="background-color:lavender;">
+                {{details.Vehicle}}
+            </div>
+    </div>
+</div>
+<button type="button aa" class="btn btn-info" routerLink="/dashboard/vehiclesummary">back</button>

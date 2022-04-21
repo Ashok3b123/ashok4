@@ -1,0 +1,12 @@
+<p>aboutcompany works!</p>
+<div>abc</div>
+<ng-container>def</ng-container>
+<ng-template>ghid</ng-template>
+<ng-container *ngTemplateOutlet="true?blockone:blocktwo"></ng-container>
+<ng-template #blockone>
+    <p>it's true block</p>
+</ng-template>
+<ng-template #blocktwo>
+    <p>it's false block</p>
+</ng-template>
+

@@ -1,0 +1,23 @@
+
+{
+    "paymentInfo":{
+        "Mode":"CreditCard",
+        "Amount":"$90.00",
+        "Date":"22 jan 2016",
+        "status":"Success",
+        "Description":"AutoPayment has been added to INV-001426"
+    },
+    "TransactionInformation":{
+        "Auto Transaction ID":"102058000000658192",
+        "Card Processed":"xxxxxxxxx1111",
+        "Gateway":"Test Gateway",
+        "Gateway Transaction ID":"1453472608279"
+    },
+    "invoices":[{
+        "Date":"22 jan 2016",
+        "Invoice#":"90",
+        "Invoice Amount(USD)":"90",
+        "Payment Applied(USD)":"90",
+        "Balance(USD)":"0"
+    }]
+}

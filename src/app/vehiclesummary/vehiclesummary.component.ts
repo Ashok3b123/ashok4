@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Vehicle } from '../vehicle';
 import { VehiclesumarryService } from '../vehiclesumarry.service';
 
 @Component({
@@ -8,7 +10,7 @@ import { VehiclesumarryService } from '../vehiclesumarry.service';
 })
 export class VehiclesummaryComponent implements OnInit {
 datas:any=[];
-  constructor(private vehicleService:VehiclesumarryService) {
+  constructor(private vehicleService:VehiclesumarryService,private router:Router) {
     vehicleService.getData().subscribe(
       (data:any)=>{this.datas=data},
       (error:any)=>{alert("Internal service error")}
@@ -41,8 +43,22 @@ pagination()
     (error:any)=>{alert("Internal service error")}
   )
 }
+delete(data:any)
+{
+ this.vehicleService.deletevehicle(data).subscribe(
+   (data:any)=>{alert('success')},
+    (error:any)=>{alert('Internal service error')}
+ )
+}
+ view(dataId:any)
+ {
+    this.router.navigateByUrl("/dashboard/employeedetails"+"/"+dataId)
 
-
+ }
+edit(dataid:any)
+{
+  this.router.navigateByUrl("/dashboard/editdetails"+"/"+dataid)
+}
   ngOnInit(): void {
   }
 

@@ -10,9 +10,13 @@ export class AccontService {
    getflip():Observable<any>{
      return this.http.get("https://6128991386a213001729f9df.mockapi.io/test/v1/principals");
    }
-   getfliteredflips(filterTerm:any)
-   {
+   getfliteredflips(filterTerm:any){
      return this.http.get('https://6128991386a213001729f9df.mockapi.io/test/v1/principals'+'?filter='+filterTerm);
+     
+   }
+   postaccont(account:any)
+   {
+     return this.http.post('https://6128991386a213001729f9df.mockapi.io/test/v1/principals',account)
    }
   constructor(private http: HttpClient) { }
 }

@@ -1,0 +1,16 @@
+.RRR{
+    text-align: center;
+    width:15%;
+    height:10%;
+    
+    
+}
+.ABC{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.error{
+    color:red;
+}

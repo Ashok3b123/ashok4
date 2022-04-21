@@ -1,5 +1,24 @@
 <p>createvehicle works!</p>
+<form [formGroup]="vehicleForm">
+<div class="ABC">
+<div class="RRR">
 <h4>CreateVehicle</h4>
-<label>vehicle:</label>
-<input type="text">
-<label for=""></label>
+<div><label>vehicle:</label>
+<input formControlName="vehicle">
+<br></div>
+<div><label >color:</label>
+<input formControlName="color">
+<br></div>
+<div><label>manufacturer</label>
+<input formControlName="manufacturer">
+<br></div>
+<div><label >type</label>
+<input formControlName="type">
+<br></div>
+<div><label>Id</label>
+<input formControlName="id">
+</div>
+<button (click)="submit()">submit</button>
+</div>
+</div>
+</form>
